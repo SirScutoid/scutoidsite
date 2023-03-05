@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "RampartOne";
+    src: url("fonts/RampartOne-Regular.ttf") format("ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:darkslategray;
+}
+
+html, body{
+    background-color: cornsilk;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul{
+    margin: 0;
+}
+
+.main-header{
+    background-image: url("images/orangeBg.png");
+    background-size: auto;
+    padding-bottom: 30px;
+}
+
+.nav li{
+    display: inline;
+}
+
+.nav a{
+    display: inline-block;
+    padding: .5em;
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.main-nav li{
+    padding: 5%;
+    align-items: center;
+}
+
+.main-nav{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: lighter;
+    border-bottom: 1px solid whitesmoke;
+}
+
+.main-site-name{
+    text-align: center;
+    margin: 0;
+    font-size: 4em;
+    font-family: "RampartOne";
+    font-weight: normal;
+    color: whitesmoke;
+    margin-top: 2%;
+}
+
+.content-section{
+    margin: 1em;
+}
+
+.container{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5em;
+}
+
+.section-header{
+    text-align: center;
+}
+
+.pfp-image{
+    float: left;
+    height: 200px;
+    width: 200px;
+    margin: 15px;
+}
+
+.main-footer{
+    background-image: url("images/orangeBg.png");
+}
+
+.main-footer-container{
+    display: flex;
+    align-items: center;
+}
+
+.main-footer-container ul{
+    flex-grow: 1;
+    text-align: end;
+}
+
+.footer-nav li{
+    padding: 0 .5em;
+}
+
+.footer-nav img{
+    height: 50px;
+    width: 50px;
+}
+
+.main-footer-container h3{
+    color: black;
+}

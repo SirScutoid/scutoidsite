@@ -9,6 +9,8 @@ var basicCard;
 var runnerCard;
 var citation;
 
+var inTheCloset = true;
+
 window.onload = function() 
 {
     timeTeller = document.getElementById("displaying-timezone-time");
@@ -16,7 +18,7 @@ window.onload = function()
     setInterval(setTimeTellerText, 1000);
 
     document.getElementById("runner-box").addEventListener("mouseover", displayRunnerStuff);
-    document.getElementById("runner-box").addEventListener("mouseout", unDisplayRunnerStuff);
+    document.getElementById("runner-box").addEventListener("mouseout", unDisplayStuff);
 
     header = document.getElementsByClassName("main-header")[0];
     footer = document.getElementsByClassName("main-footer")[0];
@@ -24,7 +26,9 @@ window.onload = function()
     runnerCard = document.getElementById("runner-card");
     citation = document.getElementsByClassName("citation")[0];
 
-    runnerCard.style.display = "none";
+    if(inTheCloset)
+        document.getElementsByClassName("basic-info")[0].innerHTML = "placeholder";
+    //runnerCard.style.display = "none";
 }
 
 function setTimeTellerText()
@@ -42,20 +46,21 @@ function setTimeTellerText()
 
 function displayRunnerStuff()
 {
-    document.body.style.backgroundColor = "#5c6bc0";
-    header.style.backgroundImage = "url('images/runnerBg.png')";
-    footer.style.backgroundImage = "url('images/runnerBg.png')";
-    basicCard.style.display = "none";
-    runnerCard.style.display = "block";
+    document.body.classList.add("trans-to-blue");
+    header.classList.add("trans-to-runner");
+    footer.classList.add("trans-to-runner");
     citation.style.color = "#6a1b9a";
 
+    basicCard.classList.add("move-right");
+    runnerCard.classList.add("move-right");
 }
-function unDisplayRunnerStuff()
+function unDisplayStuff()
 {
-    document.body.style.backgroundColor = "cornsilk";
-    header.style.backgroundImage = "url('images/orangeBg.png')";
-    footer.style.backgroundImage = "url('images/orangeBg.png')";
-    basicCard.style.display = "block";
-    runnerCard.style.display = "none";
+    document.body.classList.remove("trans-to-blue");
+    header.classList.remove("trans-to-runner");
+    footer.classList.remove("trans-to-runner");
     citation.style.color = "orange";
+
+    basicCard.classList.remove("move-right");
+    runnerCard.classList.remove("move-right");
 }

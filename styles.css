@@ -15,6 +15,7 @@ html, body{
     background-color: cornsilk;
     margin: 0;
     padding: 0;
+    overflow-x:hidden;
 }
 
 .nav ul{
@@ -22,7 +23,8 @@ html, body{
 }
 
 .main-header{
-    background-image: url("images/orangeBg.png");
+    background-image: url("images/orangeBg.gif");
+    transition-duration: 0.5s;
     background-size: auto;
     padding-bottom: 30px;
 }
@@ -72,6 +74,7 @@ html, body{
 .container{
     margin: 0 auto;
     padding: 0 1.5em;
+    position: relative;
 }
 
 .section-header{
@@ -79,7 +82,8 @@ html, body{
 }
 
 .main-footer{
-    background-image: url("images/orangeBg.png");
+    background-image: url("images/orangeBg.gif");
+    transition-duration: 0.5s;
 }
 
 .main-footer-container{
@@ -197,6 +201,11 @@ model-viewer{
     border-radius: 10px;
     color: black;
     cursor:default;
+    transition-duration: 1s;
+}
+.who-box:hover{
+    scale: 1.2;
+    translate: 0 10px;
 }
 
 #runner-box{
@@ -213,4 +222,32 @@ model-viewer{
     padding: 5px;
     size: 1.2em;
     background-color: #7986cb;
+}
+
+#basic-card{
+    position:relative;
+    transition-duration: 1s;
+}
+#basic-card.move-right{
+    translate: 120% 0;
+}
+#runner-card{
+    bottom:0px;
+    width: 97%;
+    position:absolute;
+    transition-duration: 1s;
+    translate: -120% 0;
+}
+#runner-card.move-right{
+    translate: 0% 0;
+}
+
+body{
+    transition-duration: 0.5s;
+}
+body.trans-to-blue{
+    background-color: #5c6bc0;
+}
+.trans-to-runner{
+    background-image: url(images/runnerBg.gif);
 }

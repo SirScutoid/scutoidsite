@@ -19,6 +19,8 @@ window.onload = function()
 
     document.getElementById("runner-box").addEventListener("mouseover", displayRunnerStuff);
     document.getElementById("runner-box").addEventListener("mouseout", unDisplayStuff);
+    document.getElementById("runner-box").addEventListener("touchstart", displayRunnerStuff)
+    document.getElementById("runner-box").addEventListener("touchend", unDisplayStuff);
 
     header = document.getElementsByClassName("main-header")[0];
     footer = document.getElementsByClassName("main-footer")[0];

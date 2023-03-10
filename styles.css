@@ -205,7 +205,6 @@ model-viewer{
 }
 .who-box:hover{
     scale: 1.2;
-    translate: 0 10px;
 }
 
 #runner-box{

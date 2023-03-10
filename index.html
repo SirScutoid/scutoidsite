@@ -4,6 +4,11 @@
         <title>scutoidsite</title>
         <meta name="description" content="cool website">
         <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <!--Imports a model-viewer JavaScript code -->
+        <!--It helps to handle how the 3D Object would be displayed -->
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+        <script src="index.js"></script>
     </head>
     <body>
         <header class="main-header">
@@ -15,64 +20,105 @@
                 </ul>
             </nav>
             <h1 class="main-site-name">scutoid site</h1>
-            <button type="button">see my itch</button>
-            <br>
-            <br>
-            <!-- TODO: find bg images -->
-            <button type="button">&#9658;</button>
         </header>
 
-        <section class="content-section container">
-            <h2 class="section-header">who is scutoid?</h2>
-            <p>scutoid is a cool person who makes cool stuff.</p>
-            <img src="images/disciplinePfp.png" class="pfp-image">
-            <p>wow what a cool pfp!!!</p>
-            <p>uhkdvouieavo8ewvcuwevfukwqevcuoqvouhv quohvbuhqvwbeufvwuyviywqvcyiqwvuiyvweuyvcuywqvcuywqvuiycviwvcuywveiucvqwuyvquiwecvuiwqevciuqywvciuyviyuewvciyvweovyweroveruoyqfvuoyqevuywr</p>
+        <section class="container">
+            <div id="basic-card">
+                <h2 class="section-header">✨ scutoid ✨</h2>
+                <div class="basic-info"><img src="images/nbFlag.png" class="lil-icon"> they/them <img src="images/nbFlag.png" class="lil-icon"></div>
+                <div class="basic-info"><img src="images/aroFlag.png" class="lil-icon"> aroace <img src="images/aceFlag.png" class="lil-icon"></div>
+                <div class="basic-info">rookie game developer</div>
+                <div class="basic-info"><img src="images/mindAspect.png" class="lil-icon"> sylph of mind <img src="images/mindAspect.png" class="lil-icon"></div>
+                <div class="basic-info"><img src="images/usEmoji.png" class="lil-icon"> &#40;current time: 
+                    <span id="displaying-timezone-time">00:00 XM</span>&#41;
+                </div>
+            </div>
+            <div id="runner-card">
+                <h2 class="section-header">🏃 scutoid 🏃</h2>
+                <!-- <div class="runner-info"><img src="images/nbFlag.png" class="lil-icon"> they/them <img src="images/nbFlag.png" class="lil-icon"></div> -->
+                <div class="runner-info"> 5K: 16:18 </div>
+                <div class="runner-info"> 1600: 4:48 </div>
+                <div class="runner-info"> 3200: 10:53 </div>
+                <div class="runner-info"><img src="images/strava.png" class="lil-icon"> furthest distance: 
+                    <span>X</span>
+                </div>
+                <div class="runner-info"><img src="images/strava.png" class="lil-icon"> miles run in last 4 weeks: 
+                    <span>X</span>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h4>RUNS</h4>
-            <div>
-                <div>
-                    <strong>THREE DAYS AGO</strong>
-                    &lt;&gt;
-                    <span>A FEW MILES</span>
-                    &lt;&gt;
-                    <span>IT WAS PRETTY COOL</span>
-                    &lt;&gt;
-                    <button type="button">SEE ROUTE</button>
+        <section class="content-section container">
+            <h2 class="section-header">❓ who is scutoid ❓</h2>
+            <p>
+                <div class="centered-text">scutoid is a...</div>
+                <div class="all-games">
+                    <div class="game-container who-box" id="runner-box">
+                        RUNNER
+                    </div>
+                    <div class="game-container who-box" id="dev-box">
+                        DEVELOPER
+                    </div>
                 </div>
-                <hr>
-                <div>
-                    <strong>TWO DAYS AGO</strong>
-                    &lt;&gt;
-                    <span>A FEW MORE MILES</span>
-                    &lt;&gt;
-                    <span>a bit rainy</span>
-                    &lt;&gt;
-                    <button type="button">SEE ROUTE</button>
+            </p>
+        </section>
+
+        <section class="content-section container">
+            <h2 class="section-header">❓ what is scutoid? ❓</h2>
+            <p>
+                <div class="three-d-model">
+                    <model-viewer alt="Scutoid 3d Model" src="models/scene.gltf" ar shadow-intensity="0.2" camera-controls touch-action="pan-y"></model-viewer>
+                    <span><a href="https://www.thingiverse.com/thing:3024272" target="_blank" class="citation">model by mathgrrl on thingiverse</a></span>
                 </div>
-                <hr>
-                <div>
-                    <strong>YESTERDAY</strong>
-                    &lt;&gt;
-                    <span>not very many miles</span>
-                    &lt;&gt;
-                    <span>had fun though</span>
-                    &lt;&gt;
-                    <button type="button">SEE ROUTE</button>
-                </div>
-                <hr>
-            </div>
+                scutoids are a really cool shape!
+                they have many interesting properties, and show up all over nature!
+                one of their most interesting properties is their self-packing, 
+                meaning they can pack together into a sheet with no space between.
+                they strike a fine balance between locking together and being able to move freely,
+                making them the perfect shape for cells.
+                that's right, many cells in your body are shaped like scutoids!!!!
+                <br>
+                <br>
+                but what exactly is their shape?
+                it's like a prism, but the bases aren't the same shape.
+                most of the verticles between bases are connected like normal, but one or more edges
+                split into two to accomodate the different amount of edges on each base.
+                think of "splitting into two" as the same as forming the triangle.
+                the shape on the left is called a 6-5 scutoid, because the bases are a hexagon and pentagon.
+                most scutoids you'll see will look like this, but it's not the only possible one!
+                <br>
+                <br>
+                another cool things about scutoids: they're super recent.
+                obviously they've existed forever, like it's a
+                <em>shape,</em>
+                but they were only given a proper definition and name in July 2018.
+                <br>
+                <br>
+                scutoid further reading: 
+                &nbsp;
+                <a href="https://en.wikipedia.org/wiki/Scutoid" target="_blank">wikipedia</a>
+                &nbsp;
+                <a href="https://www.youtube.com/watch?v=2_NZ1ql8B8Y" target="_blank">matt parker &lt;3</a>
+                &nbsp;
+                <a href="https://www.youtube.com/watch?v=pwgN2gfb9Lw" target="_blank">vihart</a>
+            </p>
+        </section>
+
+        <section class="content-section container">
+            <h2 class="section-header">❓ why is scutoid? ❓</h2>
+            <p class="centered-text">
+                what?
+            </p>
         </section>
 
         <footer class="main-footer">
             <div class="container main-footer-container">
-                <h3>thank you for reading! :&#41;</h3>
+                <h3>thank you for visiting! :&#41;</h3>
                 <ul class="nav footer-nav">
                     <li><a href="https://sscutoid.itch.io/" target="_blank"><img src="images/itch.png"></a></li>
                     <li><a href="https://www.youtube.com/channel/UC71gpbzgsWMYDrCzJD6NU1A" target="_blank"><img src="images/youtube.png"></a></li>
                     <li><a href="https://steamcommunity.com/id/legoboomer/" target="_blank"><img src="images/steam.png"></a></li>
+                    <li><a href="https://www.roblox.com/users/313877833/profile" target="_blank"><img src="images/roblox.png"></a></li>
                 </ul>
             </div>
         </footer>

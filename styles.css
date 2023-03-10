@@ -66,23 +66,16 @@ html, body{
 
 .content-section{
     margin: 1em;
+    line-height: 1.5em;
 }
 
 .container{
-    max-width: 900px;
     margin: 0 auto;
     padding: 0 1.5em;
 }
 
 .section-header{
     text-align: center;
-}
-
-.pfp-image{
-    float: left;
-    height: 200px;
-    width: 200px;
-    margin: 15px;
 }
 
 .main-footer{
@@ -110,4 +103,114 @@ html, body{
 
 .main-footer-container h3{
     color: black;
+}
+
+.btn{
+    text-align: center;
+    vertical-align: middle;
+    padding: .67em;
+    cursor: pointer;
+}
+
+.btn-header{
+    margin: .5em 15% 2em 15%;
+    color: darkslategray;
+    border: 2px solid whitesmoke;
+    background-color: rgba(255, 255, 255, 0.1);
+    font-size: 1.5em;
+    font-weight: lighter;
+}
+
+.btn-header:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.run-row:last-child{
+    border-bottom: none;
+}
+
+.game-container{
+    margin: 30px;
+}
+
+.game-title{
+    display:block;
+    width:100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3em;
+}
+
+.game-img{
+    height:200px;
+    width:200px;
+}
+
+.all-games{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.basic-info{
+    text-align: center;
+    padding: 5px;
+    size: 1.2em;
+    background-color:antiquewhite;
+}
+
+.lil-icon{
+    height: 1em;
+    width: auto;
+    vertical-align:text-bottom;
+}
+
+model-viewer{
+    height: 250px;
+    width: 250px;
+    margin: 0px;
+}
+
+.citation{
+    display:inline-block;
+    width:100%;
+    text-align:center;
+    color:orange;
+    font-weight: lighter;
+    font-size: 0.85em;
+}
+
+.three-d-model{
+    display:block;
+    margin: 5px;
+    float: left;
+    position: relative;
+}
+
+.centered-text{
+    text-align: center;
+}
+
+.who-box{
+    font-size: larger;
+    padding: 20px 100px;
+    border-radius: 10px;
+    color: black;
+    cursor:default;
+}
+
+#runner-box{
+    border: 2px solid #1a237e;
+    background-color:#5c6bc080;
+}
+#dev-box{
+    border: 2px solid #056f00;
+    background-color:#2baf2b80;
+}
+
+.runner-info{
+    text-align: center;
+    padding: 5px;
+    size: 1.2em;
+    background-color: #7986cb;
 }

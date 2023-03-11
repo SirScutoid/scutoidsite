@@ -64,6 +64,7 @@ html, body{
     font-weight: normal;
     color: whitesmoke;
     margin-top: 2%;
+    animation: grow-and-shrink alternate 5s infinite;
 }
 
 .content-section{
@@ -222,6 +223,12 @@ model-viewer{
     size: 1.2em;
     background-color: #7986cb;
 }
+.dev-info{
+    text-align: center;
+    padding: 5px;
+    size: 1.2em;
+    background-color: #42bd41;
+}
 
 #basic-card{
     position:relative;
@@ -240,6 +247,16 @@ model-viewer{
 #runner-card.move-right{
     translate: 0% 0;
 }
+#dev-card{
+    bottom:0px;
+    width: 97%;
+    position:absolute;
+    transition-duration: 1s;
+    translate: -120% 0;
+}
+#dev-card.move-right{
+    translate: 0% 0;
+}
 
 body{
     transition-duration: 0.5s;
@@ -247,6 +264,52 @@ body{
 body.trans-to-blue{
     background-color: #5c6bc0;
 }
+body.trans-to-green{
+    background-color: #2baf2b;
+}
 .trans-to-runner{
     background-image: url(images/runnerBg.gif);
+}
+.trans-to-dev{
+    background-image: url(images/devBg.gif);
+}
+
+@keyframes slowly-loop {
+    from{
+        transform: translateX(-32px);
+    }
+    to{
+        transform: translateX(32px);
+    }
+}
+@keyframes slowly-loop-reverse {
+    from{
+        transform: translateX(32px);
+    }
+    to{
+        transform: translateX(-32px);
+    }
+}
+
+@keyframes grow-and-shrink{
+    from{
+        transform: scale(1.0);
+    }
+    to{
+        transform: scale(1.1);
+    }
+}
+
+#music-artists-container > iframe{
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: -80px;
+}
+
+#itch-games-container > iframe{
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 20px;
 }

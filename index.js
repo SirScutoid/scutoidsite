@@ -12,23 +12,9 @@ var citation;
 
 var inTheCloset = true;
 
-// Configure OAuth2 access token for authorization: strava_oauth
-/*var strava_oauth = defaultClient.authentications['strava_oauth'];
-strava_oauth.accessToken = "YOUR ACCESS TOKEN"
-
-var stravaApi = new StravaApiV3.AthletesApi()
-
-var id = 82469952; // {Long} The identifier of the athlete. Must match the authenticated athlete.
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully. Returned data: ' + data);
-  }
-};
-stravaApi.getStats(id, callback);*/
+//auth code: becdde80563a4b20276982b24bd36d5ce41d1c83
+//refresh token: b7b10bac2fa6499373667b57bb917bf36f9c90d6
+const AUTHLINK = "https://www.strava.com/oauth/token"
 
 window.onload = function() 
 {
@@ -54,7 +40,8 @@ window.onload = function()
 
     if(inTheCloset)
         document.getElementsByClassName("basic-info")[0].innerHTML = "placeholder";
-    //runnerCard.style.display = "none";
+
+    reAuthorize();
 }
 
 function setTimeTellerText()
@@ -107,5 +94,42 @@ function unDisplayStuff()
 
 function meters2miles(meters)
 {
-    return 1,609.344 * meters;
+    return (meters * 0.000621371).toString().substring(0,6);
+}
+function seconds2hours(seconds)
+{
+    return (seconds/3600).toString().substring(0,6);
+}
+
+function getMetersRan(res)
+{
+    const milesLink = `https://www.strava.com/api/v3/athletes/82469952/stats?access_token=${res.access_token}`;
+    fetch(milesLink)
+        .then((res) => res.json())
+            .then(res => setRunnerData(res.recent_run_totals));
+}
+
+function setRunnerData(totals)
+{
+    document.getElementById("recent-miles").innerHTML = meters2miles(totals.distance);
+    document.getElementById("recent-hours").innerHTML = seconds2hours(totals.elapsed_time);
+}
+
+function reAuthorize()
+{
+    fetch(AUTHLINK,{
+        method: "post",
+        headers: {
+            "Accept": "application/json, text/plain, */*",
+            "Content-Type": "application/json"
+        },
+
+        body: JSON.stringify({
+            client_id: "103780",
+            client_secret: "c45794b820b3423b88d84dd56219449966ccd4a6",
+            refresh_token: "b7b10bac2fa6499373667b57bb917bf36f9c90d6",
+            grant_type: "refresh_token"
+        })
+    }).then(res => res.json())
+        .then(res => getMetersRan(res));
 }

@@ -300,16 +300,40 @@ body.trans-to-green{
     }
 }
 
-#music-artists-container > iframe{
-    margin-right: 5px;
-    margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: -80px;
+.spotify-embed{
+    height:172px;
+}
+.lists-embed:hover{
+    background-color:darksalmon;
+    transform: translateY(-5px);
+}
+.lists-embed{
+    padding: 10px;
+    margin: 5px;
+    background-color: wheat;
+    /* padding-bottom: 30%; */
+    border-radius: 12px;
+    transition: 0.25s;
 }
 
-#itch-games-container > iframe{
+#game-player > iframe{
+    display: none;
+}
+#game-player > iframe.selected-game{
+    display: block;
+}
+
+#game-player{
+    padding: 10px;
+    background-color: wheat;
+    margin-bottom: 10px;
+}
+
+.game-selector{
+    background-color: wheat;
+    border: 0px;
+    color: wheat;
     margin-right: 5px;
     margin-left: 5px;
-    margin-top: 5px;
-    margin-bottom: 20px;
+    padding-bottom: 5px;
 }

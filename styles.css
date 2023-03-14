@@ -330,10 +330,20 @@ body.trans-to-green{
 }
 
 .game-selector{
-    background-color: wheat;
+    background-color: #00000000;
     border: 0px;
-    color: wheat;
     margin-right: 5px;
     margin-left: 5px;
     padding-bottom: 5px;
+    padding:10px 20px;
+    transition: 0.2s;
+    font-size: 1em;
+    z-index: -9999;
+}
+.game-selector:hover{
+    transform: translateY(5px);
+}
+.game-selector.selected-game{
+    background-color:wheat;
+    transform: translateY(5px);
 }

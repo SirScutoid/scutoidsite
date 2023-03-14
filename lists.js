@@ -14,12 +14,16 @@ window.onload = function()
 
 function setGame(event)
 {
-    var eventIndex = myIndexOf(gameSelectorButtons, event);
-    console.log("eventIndex: "+eventIndex);
+    var eventIndex = myIndexOf(gameSelectorButtons, event.srcElement);
     for(var i = 0; i< games.length; i++)
     {
         games[i].classList.remove("selected-game");
     }
+    for(var i = 0; i< gameSelectorButtons.length; i++)
+    {
+        gameSelectorButtons[i].classList.remove("selected-game");
+    }
+    event.srcElement.classList.add("selected-game");
     if(eventIndex > 0)
     {
         games[eventIndex - 1].classList.add("selected-game");

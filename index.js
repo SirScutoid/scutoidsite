@@ -10,7 +10,7 @@ var runnerCard;
 var devCard;
 var citation;
 
-var inTheCloset = true;
+var inTheCloset = false;
 
 //auth code: becdde80563a4b20276982b24bd36d5ce41d1c83
 //refresh token: b7b10bac2fa6499373667b57bb917bf36f9c90d6

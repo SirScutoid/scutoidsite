@@ -170,6 +170,12 @@ html, body{
     vertical-align:text-bottom;
 }
 
+.poweredByStrava{
+    height: 2em;
+    width: auto;
+    translate: 0 0.5em;
+}
+
 model-viewer{
     height: 250px;
     width: 250px;

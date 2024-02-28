@@ -10,8 +10,6 @@ var runnerCard;
 var devCard;
 var citation;
 
-var inTheCloset = false;
-
 //auth code: becdde80563a4b20276982b24bd36d5ce41d1c83
 //refresh token: b7b10bac2fa6499373667b57bb917bf36f9c90d6
 const AUTHLINK = "https://www.strava.com/oauth/token"
@@ -37,9 +35,6 @@ window.onload = function()
     runnerCard = document.getElementById("runner-card");
     devCard = document.getElementById("dev-card");
     citation = document.getElementsByClassName("citation")[0];
-
-    if(inTheCloset)
-        document.getElementsByClassName("basic-info")[0].innerHTML = "placeholder";
 
     reAuthorize();
 }

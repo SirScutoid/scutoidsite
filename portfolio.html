@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>scutoidsite -- lists</title>
+        <meta name="description" content="cool website">
+        <link rel="stylesheet" href="styles.css">
+        <meta charset="UTF-8">
+        <!--Imports a model-viewer JavaScript code -->
+        <!--It helps to handle how the 3D Object would be displayed -->
+        <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.0.1/model-viewer.min.js"></script>
+        <script src="lists.js"></script>
+        <link rel="icon" type="image/x-icon" href="/images/favicon3.ico">
+        <script src="https://open.spotify.com/embed-podcast/iframe-api/v1" async></script>
+    </head>
+    <body>
+        <header class="main-header">
+            <nav class="nav main-nav">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="lists.html">LIKES</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                </ul>
+            </nav>
+            <h1 class="main-site-name">scutoid site!!!</h1>
+        </header>
+
+        <section class="container content-section">
+            <h2 class="centered-text"> minecraft mod: </h2>
+            <div class="all-games">
+                <div class="lists-embed" ><iframe style="border-radius:12px" frameborder="0" src="https://cfwidget.com/341478?version=1.14.4"  width="600" height="145"></iframe></div>
+        </section>
+
+        <section class="container content-section">
+            <h2 class="centered-text"> texture packs: </h2>
+            <div class="all-games">
+                <div class="lists-embed" ><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2439873226" target="_blank"><img style="border-radius:12px" frameborder="0" src="images/obamahaul.jpg"  width="200" height="200"></img></a></div>
+                <div class="lists-embed" ><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=2472720211" target="_blank"><img style="border-radius:12px" frameborder="0" src="images/undernity'sMinecraftPack.jpg"  width="200" height="200"></img></a></div>
+        </section>
+
+        <section class="container content-section">
+            <h2 class="centered-text"> games I've released: </h2>
+            <div class="all-games" id="itch-games-container">
+                <div class="lists-embed"><iframe style="border-radius:12px" frameborder="0" src="https://itch.io/embed/1594215?linkback=true&amp;border_width=0&amp;bg_color=1e1e1e&amp;fg_color=f0ead6&amp;link_color=f0ead6&amp;border_color=c1bba7" width="550" height="165"><a href="https://sscutoid.itch.io/death-again">Death Again by Scutoid, Calliope</a></iframe></div>
+                <div class="lists-embed"><iframe style="border-radius:12px" frameborder="0" src="https://itch.io/embed/1577817?linkback=true&amp;border_width=0&amp;bg_color=424242&amp;fg_color=222222&amp;link_color=ffcc58&amp;border_color=4d4d4d" width="550" height="165"><a href="https://sscutoid.itch.io/hellsells">Hell Sells by Scutoid</a></iframe></div>
+                <div class="lists-embed"><iframe style="border-radius:12px" frameborder="0" src="https://itch.io/embed/1419921?linkback=true&amp;border_width=0&amp;bg_color=312940&amp;fg_color=e9ff2a&amp;link_color=e9ff2a&amp;border_color=333333" width="550" height="165"><a href="https://sscutoid.itch.io/seenoevil">See No Evil by Scutoid, fishe, Calliope</a></iframe></div>
+                <div class="lists-embed"><iframe style="border-radius:12px" frameborder="0" src="https://itch.io/embed/1370544?linkback=true&amp;border_width=0&amp;bg_color=ffee58&amp;fg_color=222222&amp;link_color=6a1b9a&amp;border_color=45c945" width="550" height="165"><a href="https://sscutoid.itch.io/juice-pit">JUICE PIT by Scutoid</a></iframe></div>
+                <div class="lists-embed"><iframe style="border-radius:12px" frameborder="0" src="https://itch.io/embed/1942091?linkback=true&amp;border_width=0&amp;bg_color=424242&amp;fg_color=ffffff&amp;link_color=ffa726&amp;border_color=bebebe" width="552" height="167"><a href="https://sscutoid.itch.io/chicken-dinner">Chicken Kitchen by Scutoid, Calliope</a></iframe></div>
+        </section>
+
+        <section class="container content-section">
+            <h2 class="centered-text"> games you can play right here (pc only): </h2>
+            <div class="centered-text">
+                <span>
+                    <button type="button" class="game-selector selected-game">🚫 none 🚫</button>
+                </span>
+                <span>
+                    <button type="button" class="game-selector">🐔 chicken kitchen 🐔</button>
+                </span>
+                <span>
+                    <button type="button" class="game-selector">💀 death again 💀</button>
+                </span>
+                <span>
+                    <button type="button" class="game-selector">𖤐 hell sells 𖤐</button>
+                </span>
+            </div>
+            <div class="all-games" id="game-player">
+                <iframe frameborder="0" src="https://itch.io/embed-upload/7427916?color=333333" allowfullscreen="" width="640" height="500"><a href="https://sscutoid.itch.io/chicken-dinner">Play Chicken Kitchen on itch.io</a></iframe>
+                <iframe frameborder="0" src="https://itch.io/embed-upload/6056572?color=f0ead6" allowfullscreen="" width="825" height="495"><a href="https://sscutoid.itch.io/death-again">Play Death Again on itch.io</a></iframe>
+                <iframe frameborder="0" src="https://itch.io/embed-upload/5987392?color=212121" allowfullscreen="" width="1140" height="720"><a href="https://sscutoid.itch.io/hellsells">Play Hell Sells on itch.io</a></iframe>
+        </section>
+
+        <section class="content-section container">
+            <h2 class="section-header"><img src="images/doppel.png" class="lil-icon"> doppelganger <img src="images/doppel.png" class="lil-icon"></h2>
+            <p>
+                doppelganger is an unfinished existential platformer metroidvania about being the evil clone of the hero.
+                <br>
+                <br>
+                it's developed entirely by me!  that includes coding, game design, art, music, etc.  the one exception to this is
+                that many sounds are sourced from <a href="https://freesound.org/" target="_blank">freesound.org</a> because I'm really
+                bad at at sound design and they have many good ones there.
+                <br>
+                <br>
+                [SPOILERS]
+                <br>
+                in doppelganger, you succeed at killing the hero almost instantly.  now you're left to ponder: what's next?  you embark
+                on a journey of self-discovery, into an unfriendly world.  you fight enemies, fight bosses, talk to people, do
+                some platforming challenges, and collect items along this journey.
+            </p>
+        </section>
+
+        <footer class="main-footer">
+            <div class="container main-footer-container">
+                <h3>thank you for visiting! :&#41;</h3>
+                <ul class="nav footer-nav">
+                    <li><a href="https://sscutoid.itch.io/" target="_blank"><img src="images/itch.png"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UC71gpbzgsWMYDrCzJD6NU1A" target="_blank"><img src="images/youtube.png"></a></li>
+                    <li><a href="https://steamcommunity.com/id/legoboomer/" target="_blank"><img src="images/steam.png"></a></li>
+                    <li><a href="https://www.instagram.com/scutoiddev/" target="_blank"><img src="images/instagram.png"></a></li>
+                    <li><a href="https://twitter.com/scutoiddev" target="_blank"><img src="images/twitter.png"></a></li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+</html>

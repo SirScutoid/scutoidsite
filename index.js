@@ -106,8 +106,8 @@ function getMetersRan(res)
 
 function setRunnerData(totals)
 {
-    document.getElementById("recent-miles").innerHTML = meters2miles(totals.distance);
-    document.getElementById("recent-hours").innerHTML = seconds2hours(totals.elapsed_time);
+    document.getElementById("recent-miles").innerHTML = meters2miles(totals.distance)/4.0;
+    document.getElementById("recent-hours").innerHTML = seconds2hours(totals.elapsed_time)/4.0;
 }
 
 function reAuthorize()
